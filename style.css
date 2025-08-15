@@ -1,0 +1,89 @@
+:root{
+  --bg:#f7fbff;
+  --primary:#0b63d3;
+  --muted:#475569;
+  --card:#ffffff;
+  --radius:10px;
+  --container:1100px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background:var(--bg);color:#0b1726;line-height:1.5;
+}
+.container{max-width:var(--container);margin:0 auto;padding:20px}
+
+/* header */
+.site-header{background:#fff;box-shadow:0 2px 8px rgba(2,6,23,0.06);position:sticky;top:0;z-index:60}
+.navwrap{display:flex;align-items:center;gap:12px;justify-content:space-between;padding:10px 20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.logo{width:56px;height:56px;object-fit:cover;border-radius:8px}
+.brand-text{font-weight:700;line-height:1}
+.brand-text small{font-weight:400;font-size:11px;color:var(--muted);display:block;margin-top:2px}
+.nav a{margin:0 10px;text-decoration:none;color:var(--muted);font-weight:600}
+.menu-btn{display:none;background:none;border:none;font-size:20px;cursor:pointer}
+
+/* hero */
+.hero{padding:36px 0}
+.hero-inner{display:flex;gap:30px;align-items:center;justify-content:space-between}
+.hero-copy{max-width:560px}
+.hero-copy h1{font-size:1.9rem;margin:0 0 8px}
+.hero-copy p{margin:0 0 12px;color:var(--muted)}
+.hero-media img{width:100%;height:auto;border-radius:12px;box-shadow:0 10px 30px rgba(11,99,211,0.06)}
+
+/* utility */
+.section{padding:30px 0}
+.section-title{font-size:1.25rem;margin-bottom:16px;color:var(--primary)}
+.alt-bg{background:linear-gradient(180deg,#fff,#fbfdff)}
+
+/* grid & cards */
+.grid{display:grid;gap:16px}
+.subject-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--card);padding:14px;border-radius:var(--radius);box-shadow:0 8px 24px rgba(11,99,211,0.04)}
+.card img{width:100%;height:auto;border-radius:8px;margin-bottom:10px}
+.card h3{margin:6px 0}
+.card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:12px;color:var(--muted)}
+
+/* benefits */
+.benefit-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));align-items:stretch}
+
+/* teachers */
+.teacher-list{display:flex;flex-wrap:wrap;gap:20px}
+.teacher-item{width:220px;text-align:center}
+.teacher-item img{width:120px;height:120px;border-radius:12px;object-fit:cover}
+
+/* achievers */
+.achiever-list{display:flex;flex-wrap:wrap;gap:20px}
+.achiever-item img{width:100px;height:100px;border-radius:50%;object-fit:cover}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.map img, .map iframe{width:100%;border-radius:8px}
+
+/* table */
+table{width:100%;border-collapse:collapse;background:var(--card);box-shadow:0 2px 5px rgba(0,0,0,0.06)}
+table th, table td{border:1px solid #e6edf6;padding:10px;text-align:left}
+table th{background:var(--primary);color:#fff}
+
+/* form */
+form{display:flex;flex-direction:column;gap:10px}
+input,textarea,select{padding:10px;border-radius:8px;border:1px solid #e6edf6;font-size:14px}
+
+/* timer */
+#timer{font-size:20px;font-weight:bold;color:#c0392b}
+
+/* buttons */
+.btn{display:inline-block;background:var(--primary);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;border:none;cursor:pointer;font-weight:700}
+.btn-outline{background:transparent;border:1px solid var(--primary);color:var(--primary)}
+.small{padding:6px 10px;font-size:.9rem}
+
+/* footer */
+.site-footer{padding:20px 0;text-align:center;color:var(--muted);font-size:.95rem;margin-top:20px}
+
+/* responsive */
+@media (max-width:900px){
+  .hero-inner{flex-direction:column-reverse;text-align:center}
+  .menu-btn{display:block}
+  .nav{display:none}
+  .teacher-list{justify-content:center}
+}

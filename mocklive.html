@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Live Mock Test - UNIC MATHEMATICS TEACHING CENTRE</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navwrap">
+      <a class="brand" href="index.html">
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Math_icon.svg/512px-Math_icon.svg.png" alt="Logo">
+        <span class="brand-text">UNIC MATHEMATICS<br/><small>TEACHING CENTRE</small></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="achievers.html">Top Achievers</a>
+        <a href="mockpdf.html">Mock Tests (PDF)</a>
+        <a href="mocklive.html">Live Mock Test</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button id="menuBtn" class="menu-btn" aria-label="menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="container section">
+      <h2 class="section-title">Live Mock Test</h2>
+      <p class="muted">স্টার্ট করলে টাইমার চলবে — সময় শেষ হলে স্বয়ংক্রিয় সাবমিট (ডেমো: ক্লায়েন্ট-সাইড)।</p>
+
+      <div class="card">
+        <p>Time Remaining: <span id="timer">00:00</span></p>
+        <div style="margin-bottom:12px;">
+          <label>Test duration:
+            <select id="duration">
+              <option value="900">15 minutes</option>
+              <option value="1800" selected>30 minutes</option>
+              <option value="3600">60 minutes</option>
+            </select>
+          </label>
+          <button id="startBtn" class="btn" type="button">Start Test</button>
+        </div>
+
+        <form id="liveTestForm">
+          <ol>
+            <li>
+              <p>1) 12 ÷ 3 = ?</p>
+              <label><input type="radio" name="q1" value="3"> 3</label><br>
+              <label><input type="radio" name="q1" value="4"> 4</label><br>
+              <label><input type="radio" name="q1" value="6"> 6</label>
+            </li>
+            <li>
+              <p>2) Which is a living thing?</p>
+              <label><input type="radio" name="q2" value="rock"> Rock</label><br>
+              <label><input type="radio" name="q2" value="plant"> Plant</label><br>
+              <label><input type="radio" name="q2" value="water"> Water</label>
+            </li>
+          </ol>
+
+          <div style="margin-top:12px;">
+            <button id="submitTestBtn" class="btn" type="button">Submit Test</button>
+          </div>
+        </form>
+      </div>
+
+      <p class="muted" style="margin-top:12px;">নোট: ডাটাবেজ/সার্ভার সংযুক্ত করলে সার্ভারে ফল হারানো যাবে; এই ডেমো কেবল কনফার্মেশন দেখায়।</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year-6"></span> UNIC MATHEMATICS TEACHING CENTRE</p>
+    </div>
+  </footer>
+</body>
+</html>
